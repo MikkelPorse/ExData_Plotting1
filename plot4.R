@@ -58,7 +58,7 @@ createPlot4 <- function(){
   ## setup a 2x2 plot
   par(mfrow=c(2,2))
   ## upper left
-  with(feb,plot(combinedDate, Global_active_power,type="l",xlab="", ylab="Global Active Power (kilowatts)"))
+  with(feb,plot(combinedDate, Global_active_power,type="l",xlab="", ylab="Global Active Power"))
   
   ## upper right
   with(feb, plot(combinedDate, Voltage, type="l", xlab="datetime"))
