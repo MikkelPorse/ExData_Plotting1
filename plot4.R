@@ -9,7 +9,7 @@
 ## at the end, createPlot4 is called
 ##
 ## Usage:
-## source("Plot5.R") in R
+## source("Plot4.R") in R
 ##
 
 
