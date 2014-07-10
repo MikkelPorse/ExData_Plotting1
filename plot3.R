@@ -34,9 +34,9 @@ readData3 <- function(){
   feb
 }
 
-
-## Assumes the presence of household_power_consumption.txt file in working directory
 ## Produces one 480x480 pixel png named "plot3.png" in the working directory
+## showing sub meterings 1 through 3 as a function of time in one plot, 
+## using color codings to tell the data points apart
 createPlot3 <- function(){
   
   feb <- readData3()

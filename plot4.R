@@ -57,21 +57,27 @@ createPlot4 <- function(){
   png("plot4.png", width=480, height=480, units="px")
   ## setup a 2x2 plot
   par(mfrow=c(2,2))
+
   ## upper left
   with(feb,plot(combinedDate, Global_active_power,type="l",xlab="", ylab="Global Active Power"))
   
+  
   ## upper right
   with(feb, plot(combinedDate, Voltage, type="l", xlab="datetime"))
+
+  
   ## lower left
   plot(feb$combinedDate, feb$Sub_metering_1, type="n",xlab="", ylab="Energy sub metering")
   ## make sure there's room for the legend
-  legend("topright",c("Sub_metering_1","Sub_metering_1","Sub_metering_1"),col=c("black","red", "blue"),lwd=1,bty="n", plot = FALSE)  
-  
+  legend("topright",c("Sub_metering_1","Sub_metering_1","Sub_metering_1"),
+         col=c("black","red", "blue"),lwd=1,bty="n", plot = FALSE)  
   lines(feb$combinedDate, feb$Sub_metering_1, col="black")
   lines(feb$combinedDate, feb$Sub_metering_2, col="red")
   lines(feb$combinedDate, feb$Sub_metering_3, col="blue")
   legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
          col=c("black", "red", "blue"),lwd=1,bty="n")
+  
+  
   ## lower right
   with(feb, plot(combinedDate,Global_reactive_power,type="l",lwd=0.1, xlab="datetime"))
   dev.off();
